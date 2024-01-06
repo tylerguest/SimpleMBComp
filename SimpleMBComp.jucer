@@ -4,13 +4,42 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="4KStudios">
   <MAINGROUP id="xZe3HO" name="SimpleMBComp">
     <GROUP id="{57F60D69-E2EB-CA0C-8559-D31A7A5D3AD9}" name="Source">
+      <FILE id="lRnAne" name="CompressorBand.cpp" compile="1" resource="0"
+            file="Source/CompressorBand.cpp"/>
+      <FILE id="SthfxO" name="CompressorBand.h" compile="0" resource="0"
+            file="Source/CompressorBand.h"/>
+      <FILE id="KtY6gL" name="CompressorBandControls.cpp" compile="1" resource="0"
+            file="Source/CompressorBandControls.cpp"/>
+      <FILE id="rkYP3h" name="CompressorBandControls.h" compile="0" resource="0"
+            file="Source/CompressorBandControls.h"/>
+      <FILE id="sC5xGc" name="CustomButtons.cpp" compile="1" resource="0"
+            file="Source/CustomButtons.cpp"/>
+      <FILE id="IZD3HZ" name="CustomButtons.h" compile="0" resource="0" file="Source/CustomButtons.h"/>
+      <FILE id="npnU39" name="GlobalControls.cpp" compile="1" resource="0"
+            file="Source/GlobalControls.cpp"/>
+      <FILE id="SZhhaB" name="GlobalControls.h" compile="0" resource="0"
+            file="Source/GlobalControls.h"/>
+      <FILE id="HcXSEn" name="LookAndFeel.cpp" compile="1" resource="0" file="Source/LookAndFeel.cpp"/>
+      <FILE id="ecxt6E" name="LookAndFeel.h" compile="0" resource="0" file="Source/LookAndFeel.h"/>
+      <FILE id="VkJ2Yj" name="Params.cpp" compile="1" resource="0" file="Source/Params.cpp"/>
+      <FILE id="cL0rkS" name="Params.h" compile="0" resource="0" file="Source/Params.h"/>
+      <FILE id="Qjxr5l" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="jaqPz2" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <FILE id="O6CR6m" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="zSLRG0" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="Qjxr5l" name="PluginEditor.cpp" compile="1" resource="0"
-            file="Source/PluginEditor.cpp"/>
-      <FILE id="jaqPz2" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="lXZald" name="RotarySliderWithLabels.cpp" compile="1" resource="0"
+            file="Source/RotarySliderWithLabels.cpp"/>
+      <FILE id="WNpKzL" name="RotarySliderWithLabels.h" compile="0" resource="0"
+            file="Source/RotarySliderWithLabels.h"/>
+      <FILE id="UlSjsZ" name="Utilities.cpp" compile="1" resource="0" file="Source/Utilities.cpp"/>
+      <FILE id="fIqcZ2" name="Utilities.h" compile="0" resource="0" file="Source/Utilities.h"/>
+      <FILE id="oiUBN7" name="UtilityComponents.cpp" compile="1" resource="0"
+            file="Source/UtilityComponents.cpp"/>
+      <FILE id="dWDJZB" name="UtilityComponents.h" compile="0" resource="0"
+            file="Source/UtilityComponents.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
