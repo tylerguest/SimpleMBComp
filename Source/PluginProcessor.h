@@ -18,8 +18,8 @@ GUI Roadmap
     6) Custom look and feel for the sliders and toggle buttons DONE
     7) Spectrum Analyzer Overview DONE
     8) Data Structures for Sprectrum Analyzer DONE
-    9) Fifo usage in pluginProcessor::processBlock
-    10) Implementation of the analyzer rendering pre-computed paths
+    9) Fifo usage in pluginProcessor::processBlock DONE 
+    10) Implementation of the analyzer rendering pre-computed paths DONE 
     11) Drawing crossovers on top of the analyzer plot
     12) Drawing gain reduction on top of the analyzer
     13) Analyzer bypass
