@@ -16,8 +16,8 @@ GUI Roadmap
     4) Band Select Functionality DONE   
     5) Band Select Buttons reflect the Solo/Mute/Bypass state DONE
     6) Custom look and feel for the sliders and toggle buttons DONE
-    7) Spectrum Analyzer Overview
-    8) Data Structures for Sprectrum Analyzer
+    7) Spectrum Analyzer Overview DONE
+    8) Data Structures for Sprectrum Analyzer DONE
     9) Fifo usage in pluginProcessor::processBlock
     10) Implementation of the analyzer rendering pre-computed paths
     11) Drawing crossovers on top of the analyzer plot
