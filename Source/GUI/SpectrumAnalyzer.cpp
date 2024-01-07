@@ -104,10 +104,19 @@ std::vector<float> SpectrumAnalyzer::getFrequencies()
 
 std::vector<float> SpectrumAnalyzer::getGains()
 {
-    return std::vector<float>
+//    return std::vector<float>
+//    {
+//        -24, -12, 0, 12, 24
+//    };
+    std::vector<float> values;
+
+    auto increment = MAX_DECIBLES;
+    for (auto db = NEGATIVE_INFINITY; db <= MAX_DECIBLES; db += increment)
     {
-        -24, -12, 0, 12, 24
-    };
+        values.push_back(db);
+    }
+
+    return values;  
 }
 
 std::vector<float> SpectrumAnalyzer::getXs(const std::vector<float>& freqs, float left, float width)
@@ -147,7 +156,9 @@ void SpectrumAnalyzer::drawBackgroundGrid(juce::Graphics& g,
 
     for (auto gDb : gain)
     {
-        auto y = jmap(gDb, -24.f, 24.f, float(bottom), float(top));
+//        auto y = jmap(gDb, -24.f, 24.f, float(bottom), float(top));
+        auto y = jmap(gDb, NEGATIVE_INFINITY, MAX_DECIBLES,
+            (float)bottom, (float)top);
 
         g.setColour(gDb == 0.f ? Colour(0u, 172u, 1u) : Colours::darkgrey);
         g.drawHorizontalLine(y, left, right);
@@ -205,7 +216,9 @@ void SpectrumAnalyzer::drawTextLabels(juce::Graphics& g, juce::Rectangle<int> bo
 
     for (auto gDb : gain)
     {
-        auto y = jmap(gDb, -24.f, 24.f, float(bottom), float(top));
+//        auto y = jmap(gDb, -24.f, 24.f, float(bottom), float(top));
+        auto y = jmap(gDb, NEGATIVE_INFINITY, MAX_DECIBLES,
+            (float)bottom, (float)top);
 
         String str;
         if (gDb > 0)
@@ -224,13 +237,13 @@ void SpectrumAnalyzer::drawTextLabels(juce::Graphics& g, juce::Rectangle<int> bo
 
         g.drawFittedText(str, r, juce::Justification::centredLeft, 1);
 
-        str.clear();
-        str << (gDb - 24.f);
+//        str.clear();
+//        str << (gDb - 24.f);
 
         r.setX(bounds.getX() + 1);
-        textWidth = g.getCurrentFont().getStringWidth(str);
-        r.setSize(textWidth, fontHeight);
-        g.setColour(Colours::lightgrey);
+//        textWidth = g.getCurrentFont().getStringWidth(str);
+//        r.setSize(textWidth, fontHeight);
+//        g.setColour(Colours::lightgrey);
         g.drawFittedText(str, r, juce::Justification::centredLeft, 1);
     }
 }
@@ -242,7 +255,8 @@ void SpectrumAnalyzer::resized()
     auto fftBounds = getAnalysisArea(bounds).toFloat();
     auto negInf = jmap(bounds.toFloat().getBottom(),
                        fftBounds.getBottom(), fftBounds.getY(),
-                       -48.f, 0.f);
+//                       -48.f, 0.f);
+                       NEGATIVE_INFINITY, MAX_DECIBLES);
     DBG("Negative infinity: " << negInf);
     leftPathProducer.updateNegativeInfinity(negInf);
     rightPathProducer.updateNegativeInfinity(negInf);    
