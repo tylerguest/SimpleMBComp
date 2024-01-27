@@ -34,6 +34,8 @@ struct SpectrumAnalyzer : juce::Component,
     {
         shouldShowFFTAnalysis = enabled;
     }
+
+    void update(const std::vector<float>& values);
 private:
     SimpleMBCompAudioProcessor& audioProcessor;
 
@@ -67,4 +69,7 @@ private:
     juce::AudioParameterFloat* midThresholdParam{ nullptr };
     juce::AudioParameterFloat* highThresholdParam { nullptr };
     
+    float lowBandGr{ 0.f };
+    float midBandGr{ 0.f };
+    float highBandGr{ 0.f };
 };
